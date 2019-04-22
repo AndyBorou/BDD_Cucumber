@@ -8,8 +8,8 @@ import cucumber.api.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         format = {"pretty", "json:target/cucumber.json"}
-        ,features ={"src/test/resources/features/simpleTest.feature"}
-        ,glue = "stepsDefinition"
+        , features = {"src/test/resources/features/simpleTest.feature"}
+        , glue = "stepsDefinition"
 )
 public class Runner {
 }
