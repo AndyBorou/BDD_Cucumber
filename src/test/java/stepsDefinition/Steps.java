@@ -14,7 +14,7 @@ public class Steps {
     @Given("^Open the Chrome$")
     public void open_the_Firefox_and_launch_the_application() {
         System.setProperty("webdriver.chrome.driver",
-                "../BDD_Cucumber/src/drivers/chromedriver.exe");
+                "src/drivers/chromedriver.exe");
         System.setProperty("selenide.browser", "Chrome");
     }
 
