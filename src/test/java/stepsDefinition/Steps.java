@@ -2,7 +2,9 @@ package stepsDefinition;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static utils.MyDriverManager.initChromeDriver;
 
+import com.codeborne.selenide.WebDriverRunner;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -13,9 +15,10 @@ public class Steps {
 
     @Given("^Open the Chrome$")
     public void open_the_Firefox_and_launch_the_application() {
-        System.setProperty("webdriver.chrome.driver",
-                "src/drivers/chromedriver.exe");
-        System.setProperty("selenide.browser", "Chrome");
+        WebDriverRunner.setWebDriver(initChromeDriver());
+//        System.setProperty("webdriver.chrome.driver",
+//                "src/drivers/chromedriver.exe");
+//        System.setProperty("selenide.browser", "Chrome");
     }
 
     @When("^Open web page$")
