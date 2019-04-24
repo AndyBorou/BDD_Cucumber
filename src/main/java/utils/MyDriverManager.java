@@ -2,6 +2,7 @@ package utils;
 
 import com.codeborne.selenide.Configuration;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
+import io.github.bonigarcia.wdm.FirefoxDriverManager;
 import io.qameta.allure.Step;
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -13,10 +14,10 @@ public class MyDriverManager {
 
     @Step("Init Chrome driver")
     public static WebDriver initChromeDriver() {
-        Configuration.browser = "chrome";
-        ChromeDriverManager.getInstance().setup();
+        Configuration.browser = "firefox";
+        FirefoxDriverManager.getInstance().setup();
         DesiredCapabilities browser = new DesiredCapabilities();
-        browser.setBrowserName("chrome");
+        browser.setBrowserName("firefox");
         browser.setCapability("enableVNC", true);
         RemoteWebDriver driver = null;
         try {
