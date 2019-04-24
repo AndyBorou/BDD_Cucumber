@@ -23,7 +23,7 @@ public class Steps {
 
     @When("^Open web page$")
     public void enter_the_Username_and_Password() {
-        open("https://www.epam.com/");
+        open("https://www.google.com/");
     }
 
     @Then("^Check element$")
