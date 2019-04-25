@@ -15,6 +15,11 @@ public class Steps {
 
     @Given("^Open the Chrome$")
     public void open_the_Firefox_and_launch_the_application() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         WebDriverRunner.setWebDriver(initChromeDriver());
 //        System.setProperty("webdriver.chrome.driver",
 //                "src/drivers/chromedriver.exe");
