@@ -14,11 +14,11 @@ public class MyDriverManager {
 
     @Step("Init Chrome driver")
     public static WebDriver initChromeDriver() {
-        Configuration.browser = "firefox";
-        FirefoxDriverManager.getInstance().setup();
+        Configuration.browser = "chrome";
+        ChromeDriverManager.getInstance().setup();
         DesiredCapabilities browser = new DesiredCapabilities();
-        browser.setBrowserName("firefox");
-        browser.setVersion("66.0");
+        browser.setBrowserName("chrome");
+        browser.setVersion("73.0");
         browser.setCapability("enableVNC", true);
         RemoteWebDriver driver = null;
         try {
