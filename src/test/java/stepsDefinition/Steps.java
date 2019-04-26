@@ -10,16 +10,19 @@ import io.qameta.allure.Step;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.qameta.allure.junit4.DisplayName;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 
+
 public class Steps {
 
+    @DisplayName("open Chrome")
     @Step
     @Given("^Open the Chrome$")
-    public void open_the_Firefox_and_launch_the_application() {
+    public void open_the_Chrome_and_launch_the_application() {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
