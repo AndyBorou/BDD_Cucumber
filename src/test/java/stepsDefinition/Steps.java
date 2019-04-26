@@ -2,6 +2,7 @@ package stepsDefinition;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static utils.MyDriverManager.initChromeDriver;
 
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Attachment;
@@ -19,15 +20,15 @@ public class Steps {
     @Step
     @Given("^Open the Chrome$")
     public void open_the_Firefox_and_launch_the_application() {
-//        try {
-//            Thread.sleep(3000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//        WebDriverRunner.setWebDriver(initChromeDriver());
-        System.setProperty("webdriver.chrome.driver",
-                "src/drivers/chromedriver.exe");
-        System.setProperty("selenide.browser", "Chrome");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        WebDriverRunner.setWebDriver(initChromeDriver());
+//        System.setProperty("webdriver.chrome.driver",
+//                "src/drivers/chromedriver.exe");
+//        System.setProperty("selenide.browser", "Chrome");
     }
 
     @Step
