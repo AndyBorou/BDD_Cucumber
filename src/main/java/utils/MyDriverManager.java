@@ -17,8 +17,8 @@ public class MyDriverManager {
         Configuration.browser = "firefox";
         FirefoxDriverManager.getInstance().setup();
         DesiredCapabilities browser = new DesiredCapabilities();
-        browser.setBrowserName("firefox");
-        browser.setVersion("66.0");
+        browser.setBrowserName("chrome");
+        browser.setVersion("latest");
         browser.setCapability("enableVNC", true);
         RemoteWebDriver driver = null;
         try {
