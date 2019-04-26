@@ -14,7 +14,7 @@ public class MyDriverManager {
 
     @Step("Init Chrome driver")
     public static WebDriver initChromeDriver() {
-        Configuration.browser = "firefox";
+        Configuration.browser = "chrome";
         FirefoxDriverManager.getInstance().setup();
         DesiredCapabilities browser = new DesiredCapabilities();
         browser.setBrowserName("chrome");
