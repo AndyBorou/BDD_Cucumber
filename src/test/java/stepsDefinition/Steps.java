@@ -36,14 +36,14 @@ public class Steps {
 
     @Step
     @When("^Open web page$")
-    public void enter_the_Username_and_Password() {
+    public void openWebPage() {
         open("https://www.epam.com/");
     }
 
     @Then("^Check element$")
-    public void reset_the_credential() {
-        String text = $(By.xpath(".//a[contains(@class, 'cta-button-ui')]")).getText();
-        Assert.assertEquals(text, "CONTACT US");
+    public void checkButton() {
+        String text = $(By.xpath(".//button/span[contains(@class, 'button__content')]")).getText();
+        Assert.assertEquals(text, "ACCEPT");
         makeScreenShot();
     }
 
