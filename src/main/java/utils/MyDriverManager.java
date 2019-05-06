@@ -2,8 +2,6 @@ package utils;
 
 import com.codeborne.selenide.Configuration;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
-import io.github.bonigarcia.wdm.FirefoxDriverManager;
-import io.qameta.allure.Step;
 import java.net.MalformedURLException;
 import java.net.URI;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +10,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class MyDriverManager {
 
-    @Step("Init Chrome driver")
+
     public static WebDriver initChromeDriver() {
         Configuration.browser = "chrome";
         ChromeDriverManager.getInstance().setup();
